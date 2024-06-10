@@ -1,6 +1,6 @@
 # Sistema de Recomendação de Filmes
 
-Este é um sistema de recomendação de filmes que usa duas abordagens diferentes: filtragem colaborativa e filtragem baseada em conteúdo. O sistema foi implementado em Python usando a biblioteca Surprise para a filtragem colaborativa, Pandas para análise de dados, Flask para a criação de uma interface web e fuzzywuzzy para comparação de strings, encontrando correspondências aproximadas.
+Este é um sistema de recomendação de filmes que usa duas abordagens diferentes: filtragem colaborativa e filtragem baseada em conteúdo. O sistema foi implementado em Python usando a biblioteca Surprise para a filtragem colaborativa, Pandas para análise de dados, Flask para a criação de uma interface web e fuzzywuzzy para comparação de strings, encontrando correspondências aproximadas. O dataset utilizado é o dataset do MovieLens: https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset
 
 ## Como funciona
 
