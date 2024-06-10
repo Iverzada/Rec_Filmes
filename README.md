@@ -6,9 +6,9 @@ Este é um sistema de recomendação de filmes que usa duas abordagens diferente
 
 O sistema possui duas rotas principais:
 
-1. A página inicial da aplicação web. Aqui, o usuário pode inserir o nome de um filme.
+1. **Ínicio**: Aparece a página inicial da aplicação web. Aqui, o usuário pode inserir o nome de um filme.
 
-2. **/recommend**: Quando o usuário insere um nome de filme e envia o formulário, o sistema recomenda filmes semelhantes usando duas abordagens:
+2. **Recomendação**: Quando o usuário insere um nome de filme e envia o formulário, o sistema recomenda filmes semelhantes usando duas abordagens:
 
    - **Filtragem Colaborativa**: Utiliza o algoritmo SVD (Singular Value Decomposition) da biblioteca Surprise para recomendar filmes com base nas avaliações de usuários semelhantes.
    
@@ -34,5 +34,4 @@ Bibliotecas: Pandas, Surprise e fuzzywuzzy
 Para utilizar esse app, execute o script principal:
    ```sh
    python app.py
-
 
