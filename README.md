@@ -42,7 +42,10 @@ Para utilizar esse app, execute o script principal:
 - scikit-surprise
 - fuzzywuzzy
 
+## Objetivo, resultados obtidos e conclusões.
+
+O objetivo deste sistema é auxiliar o usuário a encontrar melhor um filme que o agrade, mas também pode ser utilizado para evitar assistir algum filme que o mesmo não goste. Colocando o nome do filme na caixa do site você receberá, 5 filmes semelhantes segundo nosso algoritmo de recomendação, colocando um filme que você não goste irá aparecer 5 filmes que você não deve assistir, um que você ame e aparecerá 5 filmes que você provavelmente irá gostar. Os resultados são bons e variados, tive que mexer mais de uma vez no código para aparecer uma gama maior além dos padrões de recomendação, porém ocasionalmente alguns filmes podem acabar se recomendando e tem a limitação que o nome do filme tem que ser escrito em inglês. 
+
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT.
-
