@@ -18,20 +18,31 @@ O sistema possui duas rotas principais:
 
 Para executar o sistema localmente, siga estas etapas:
 
-1. Clone este repositório:
-
-
 1. Clone o repositório:
    ```sh
    git clone https://github.com/Iverzada/Rec_Filmes.git
-   cd Rec_filmes
+   cd sistema-recomendacao-filmes
+   ```
 2.Requerimentos:
-Bibliotecas: Pandas, Surprise e fuzzywuzzy
+Instale as Dependências e Bibliotecas: Flask, Pandas, Surprise e fuzzywuzzy
    ```sh
-   pip install pandas scikit-surprise fuzzywuzzy
-```
-3. Uso
+   pip install Flask pandas scikit-surprise fuzzywuzzy
+   ```
+3. Execute o aplicativo Flask:
 Para utilizar esse app, execute o script principal:
    ```sh
    python app.py
+   ```
+4. Acesse o sistema no seu navegador em [http://localhost:5000](http://localhost:5000)
+## Requisitos
+
+- Python 3.x
+- Flask
+- pandas
+- scikit-surprise
+- fuzzywuzzy
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
