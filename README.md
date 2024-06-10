@@ -44,5 +44,5 @@ Para utilizar esse app, execute o script principal:
 
 ## Licença
 
-Este projeto está licenciado sob a [Licença MIT](LICENSE).
+Este projeto está licenciado sob a [Licença MIT].
 
