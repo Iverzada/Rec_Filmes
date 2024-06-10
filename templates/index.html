@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recomendador de Filmes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style> /* Estilo para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #444444;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Estilo para o cabeçalho */
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-top: 50px;
+        }
+        
+        /* Estilo para o formulário */
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        /* Estilo para a entrada de texto */
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+        
+        /* Estilo para o botão */
+        button {
+            padding: 10px 20px;
+            background-color: #353030;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #161616;
+        }
+        
+        /* Estilo para a lista de recomendações */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-top: 10px;
+        }
+        
+        /* Estilo para as recomendações */
+        .recommendations {
+            text-align: center;
+            margin-top: 20px;
+        }
+         /* Estilo para a tabela de recomendações */
+.recommendations {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #6e6e6e;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o cabeçalho da tabela */
+.recommendations th {
+    background-color: #353535;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Estilo para as células da tabela */
+.recommendations td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #000000;
+}
+
+/* Estilo para as células da última linha da tabela */
+.recommendations tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Estilo para as linhas pares da tabela */
+.recommendations tbody tr:nth-child(even) {
+    background-color: #353030;
+    color: #979797;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Recomendador de Filmes</h1>
+    <form method="post" action="/recommend">
+        <label for="user_input">Digite o nome de um filme:</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">Recomendar</button>
+    </form>
+    <table class="recommendations">
+        <thead>
+            <tr>
+                <th>Filmes Recomendados</th>
+                <th>Página do Google do filme</th> 
+            </tr>
+        </thead>
+        <tbody>
+            {% for movie, google_link in recommendations %}
+                <tr>
+                    <td>{{ movie if not movie.endswith(', The') else 'The ' + movie[:-5] }}</td>
+                    <td><a href="{{ google_link }}" target="_blank">Clique Aqui!</a></td> <!-- Link para o Google -->
+                </tr>
+            {% endfor %}
+        </tbody>        
+    </table>
+    
