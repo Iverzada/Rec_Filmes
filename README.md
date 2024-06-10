@@ -1,11 +1,25 @@
-# Rec_Filmes
-Um algoritmo de recomendação básico em Python utilizando a metodologia de Filtragem Colaborativa com Decomposição em Valores Singulares (SVD).
+# Sistema de Recomendação de Filmes
 
-# Descrição
-Este projeto é uma aplicação Python que recomenda 5 filmes a você dependendo de qual filme você inseriu, além de entregar o link do google direto ao usuário. O objetivo do projeto é facilitar você a encontrar outros filmes semelhantes a aquele que você inseriu, seja tanto para achar outros filmes que você provavelmente irá gostar inserindo um filme que você goste quanto filmes que você pode evitar inserindo filmes que te desagrade.
+Este é um sistema de recomendação de filmes que usa duas abordagens diferentes: filtragem colaborativa e filtragem baseada em conteúdo. O sistema foi implementado em Python usando a biblioteca Surprise para a filtragem colaborativa e Flask para a criação de uma interface web.
+
+## Como funciona
+
+O sistema possui duas rotas principais:
+
+1. **/**: Esta é a página inicial da aplicação web. Aqui, o usuário pode inserir o nome de um filme.
+
+2. **/recommend**: Quando o usuário insere um nome de filme e envia o formulário, o sistema recomenda filmes semelhantes usando duas abordagens:
+
+   - **Filtragem Colaborativa**: Utiliza o algoritmo SVD (Singular Value Decomposition) da biblioteca Surprise para recomendar filmes com base nas avaliações de usuários semelhantes.
+   
+   - **Filtragem Baseada em Conteúdo**: Calcula a similaridade entre os gêneros do filme inserido e outros filmes na base de dados para recomendar filmes com gêneros semelhantes.
 
 ## Instalação
-Para instalar este projeto, siga os passos abaixo:
+
+Para executar o sistema localmente, siga estas etapas:
+
+1. Clone este repositório:
+
 
 1. Clone o repositório:
    ```sh
